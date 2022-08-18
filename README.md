@@ -11,7 +11,7 @@
 
 ## Project Description
 
--  Time is money during manufacturing. By prediciting whether or not a machine will fail and the type of failure, we are able to find the conditions which caused the failure. Predicting failure will eliminate downtime to repair broken equipment saving money from the machine parts and the labor required to do the repairs.
+-  Time is money during manufacturing. By prediciting whether or not a machine will fail and the type of failure, we are able to find the conditions which caused the failure. Predicting failure will eliminate downtime to repair broken equipment saving money from the machine parts and the labor required to do the repairs. This will help companies produce more good with less wasted capital, improving overall the overall bottom line for the company.
 
 ---
 
@@ -35,15 +35,14 @@
 
 - Clone my repo (including the proj_acquire.py)
 - Libraries used are pandas, matplotlib, seaborn, numpy, sklearn, imblearn, xgboost, and tpot
-- You should be able to run final_maintenance.ipynb
+- You should be able to run final_maintenance_notebook.ipynb
 
 ---
 
 ### The plan
 
-1. Wrangle the data using the proj_acquire.py folder 
-    
-2. Additionally inside of the proj_acquire.py folder, I prepped, cleaned the dataset.  I also featured engineered columns to help the exploration visualizations. 
+1. Wrangle the data using the proj_acquire.py folder     
+2. Additionally inside of the proj_acquire.py folder, I prepped, cleaned, and split the dataset.  I also featured engineered columns to help the exploration visualizations. 
 3. During the exploration phase in maintenance_explore.ipynb, I visualize multiple features to asses which features to include in the model and to find if the features are statistically significant. Inside my explore notebook, I make multiple models and compare the results against each other to determine the final models to include within the final report.
 4. Move and organize all important and useful features to a final notebook to deliver a streamlined product for stakeholders and management.  
 5. Deliver a final report notebook with all required .py files
@@ -143,6 +142,7 @@ Result: We reject the null.
 * The best classification model for fail or not fail is the Decision Tree Classifier. The modele did better on the train due. Decision tree had an 81% recall rate which means guessed actual failures correctly and an overall accuracy of 86%.
 * The top two performing models for both the multiclassification and regular classification were Decision Tree and XGBoost Classifier. The decision tree performed slight better in over recall with a 73% compared to XGBoosts 66%. However XG has a 97% accuracy compared to just 7% of decisions tree, due to the extreme difference in accuracy I will be going with XGBoost for the test. 
 * Recall proved to be lower than overall accuracy. However, if I were to use accuracy for the baseline, I would be able to beat baseline by roughly 2%
+* After running the models on test they slightly beat validate. Since there is no recall for 
 
 ---
 # Recommendations
