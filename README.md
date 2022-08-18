@@ -140,14 +140,14 @@ Result: We reject the null.
 --- 
 
 # Summary
-* The polynomial regression model used on the data beat the baseline prediction by almost 35,000
-* The data has a lot of variance within it self causing for the large RMSE
-* The top features to help predict the home value are: Square feet, Bed Bath Ratio, and House Age
+* The best classification model for fail or not fail is the Decision Tree Classifier. The modele did better on the train due. Decision tree had an 81% recall rate which means guessed actual failures correctly and an overall accuracy of 86%.
+* The top two performing models for both the multiclassification and regular classification were Decision Tree and XGBoost Classifier. The decision tree performed slight better in over recall with a 73% compared to XGBoosts 66%. However XG has a 97% accuracy compared to just 7% of decisions tree, due to the extreme difference in accuracy I will be going with XGBoost for the test. 
+* Recall proved to be lower than overall accuracy. However, if I were to use accuracy for the baseline, I would be able to beat baseline by roughly 2%
 
 ---
 # Recommendations
 * Gain additional information from the machines such as time, so that we can predict when a tool might fail 
-* Try to gain additional features about the house such as school district, if it was remolded, and appliance quality 
+* Try to use a regression for the binary classification to see how well that might perform.
 ---
 # Next Steps
 * Build a model pipeline to predict if it would fail and then what type of failure more accurately
